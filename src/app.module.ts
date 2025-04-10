@@ -28,8 +28,11 @@ const infrastructureDatabaseModule = TypeOrmModule.forRootAsync({
   },
 });
 
+import { OrdersModule } from './woocommerce/orders.module';
+
 @Module({
   imports: [
+    OrdersModule,
     ConfigModule.forRoot({
       isGlobal: true,
       load: [
